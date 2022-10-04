@@ -1,0 +1,17 @@
+#loading {
+    color: gold;
+    justify-content: center;
+}
+
+.link-character {
+    text-decoration: none;
+    background-color: gold;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.link-character:hover {
+    background-color: black;
+    color: gold;
+}

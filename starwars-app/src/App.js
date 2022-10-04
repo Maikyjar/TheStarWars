@@ -32,8 +32,8 @@ function App() {
           <Nav />
           <Routes>
             <Route path='/' element={<Cards films={films} />} />
-            <Route path="/film/:filmId" element={<Detail />} />
-            <Route path="/character/:url" element={<Character />} />
+            <Route path="film/:filmId" element={<Detail />} />
+            <Route path="character/:id" element={<Character />} />
           </Routes>
         </Container>
       </div>

@@ -28,9 +28,9 @@ export default function Detail() {
                 style={{ width:'50rem'}}
                 className="text-center"
             >
-                <Card.Header>A long time ago in a galaxy far, far away </Card.Header>
+                <Card.Header className="text-primary">A long time ago in a galaxy far, far away </Card.Header>
                 <Card.Body>
-                    <Card.Title> {film.title} </Card.Title>
+                    <div className="title"> {film.title} </div>
                     <Card.Text>{film.opening_crawl}</Card.Text>
                     <Table striped bordered hover variant="dark">
                         <thead>
@@ -48,6 +48,7 @@ export default function Detail() {
                             </tr>
                         </tbody>
                     </Table>
+                    <div className='title'> Characters </div>
                     <Table striped bordered hover variant="dark">
                         <thead>
                             <tr>

@@ -19,3 +19,12 @@
     padding-top: 0px !important;
   }
   
+  .link-detail {
+    text-decoration: none;
+    color: gold;
+  }
+
+  .link-detail:hover {
+    background-color: gold;
+    color: black;
+  }

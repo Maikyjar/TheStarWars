@@ -2,18 +2,18 @@ import React from 'react';
 import './Nav.css';
 import image from '../star.webp'
 import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <div>
       <img src={image} alt="banner" id='image-logo'/>
-      <Navbar className='navbar'>
-          <Container fluid>
-            <Navbar.Brand href="#home" onClick={() => window.location.reload(true)} >
-              Star Wars App
+      <Navbar className="justify-content-center">
+            <Navbar.Brand>
+              <Link className='link-home' to={'/'}>
+                Home Films
+              </Link>
             </Navbar.Brand>
-          </Container>
       </Navbar>
     </div>
   );

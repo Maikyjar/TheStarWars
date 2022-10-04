@@ -6,6 +6,12 @@
 }
 
 #loading {
-    color: #ff6;
+    color: gold;
     justify-content: center;
+}
+
+.title {
+    color: gold;
+    font-weight: bold;
+    font-size: 0.8cm;
 }

@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Table from 'react-bootstrap/Table';
 import { Link } from "react-router-dom";
+import './Card.css'; 
 
 export default function Card ({index, title, release_date, director, producer, opening_crawl, episode_id}) {
     const [active, setActive] = useState(false);
@@ -12,7 +13,7 @@ export default function Card ({index, title, release_date, director, producer, o
     return (
       <>
         <tr key={index}>
-            <td><Link to={`/film/${episode_id}`}>{title}</Link></td>
+            <td><Link className='link-detail' to={`/film/${episode_id}`}>{title}</Link></td>
             <td>{release_date}</td>
             <td>{director}</td>
             <td>{producer}</td>

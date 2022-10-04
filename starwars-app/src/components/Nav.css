@@ -26,3 +26,16 @@
   .navbar {
     background-color: black;
   }
+
+  .link-home {
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    font-size: 0.8cm;
+    padding: 3px;
+  }
+
+  .link-home:hover {
+    background-color: gold;
+    color: black;
+  }

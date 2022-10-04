@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import './DetailCard.css';
 
 export default function DetailCard({characters}) {
-
     const [charactersR, setCharactersR] = useState([]);
 
     const fetchData = async (urls) => {
@@ -19,11 +19,11 @@ export default function DetailCard({characters}) {
 
     useEffect(() => {
         fetchData(characters).then(response => setCharactersR(response));
-    }, [])
+    }, [characters])
 
     return(
         <>
-            {charactersR.map(c => {
+            {charactersR.length?charactersR.map(c => {
                 return(
                 <tr key={c.name}>
                     <td>{c.name}</td>
@@ -31,10 +31,12 @@ export default function DetailCard({characters}) {
                     <td>{c.gender}</td>
                     <td>{c.mass}</td>
                     <td>{c.height}</td>
-                    <td><Link to={`/character/${c.url}`}>See More</Link></td>
+                    <td><Link className='link-character' to={`/character/${c.url.substr(-2)}`}>See More</Link></td>
                 </tr>
                 )
-            })}
+            }):<tr >
+                    <td id='loading'>Loading...</td>
+                </tr>}
         </>
     )
 }
