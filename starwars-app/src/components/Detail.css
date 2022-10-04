@@ -1,0 +1,11 @@
+#page-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+}
+
+#loading {
+    color: #ff6;
+    justify-content: center;
+}
